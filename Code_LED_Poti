@@ -1,0 +1,14 @@
+#define led 2
+#define poti 3
+
+void setup() {
+pinMode (led, OUTPUT);
+
+}
+
+void loop() {
+
+int val= analogRead (poti) ;
+val= map (val, 1, 1024, 1, 255);
+analogWrite (led, val);
+}
